@@ -1,0 +1,14 @@
+# JetBrains IDE (WebStorm/PyCharm/IntelliJ)
+.idea/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs / temp
+*.log
+*.tmp
