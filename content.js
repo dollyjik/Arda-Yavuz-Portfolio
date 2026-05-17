@@ -1,7 +1,6 @@
 
 window.PORTFOLIO_CONTENT = {
   meta: {
-    handle: "dollyjik",
     itchUser: "dollyjik",
     name: "Arda Yavuz",
     role: { tr: "oyun geliştirici", en: "game developer" },
@@ -116,18 +115,10 @@ window.PORTFOLIO_CONTENT = {
   },
 
   ui: {
-    viewAll:   { tr: "tümünü gör →", en: "view all →" },
-    playOn:    { tr: "itch.io'da oyna", en: "play on itch.io" },
-    readMore:  { tr: "devamını oku", en: "read more" },
-    close:     { tr: "kapat",         en: "close" },
-    loading:   { tr: "yükleniyor…",   en: "loading…" },
-    comingSoon: {
-      tr: "Yakında",
-      en: "Coming soon",
-    },
-    comingSoonDesc: {
-      tr: "Yakında ilk devblog yazıları burada olacak.",
-      en: "First devblog entries will land here soon.",
-    },
+    close:  { tr: "kapat",       en: "close" },
+    footer: { tr: "el yapımı · tek sayfa · 2026", en: "handmade · single page · 2026" },
+    comingSoon:     { tr: "Yakında", en: "Coming soon" },
+    comingSoonDesc: { tr: "Yakında ilk devblog yazıları burada olacak.",
+                      en: "First devblog entries will land here soon." },
   },
 };

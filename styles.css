@@ -746,3 +746,295 @@ a.jam-row.is-link:hover .jam-name { color: var(--accent); }
     transition-duration: 0.01ms !important;
   }
 }
+/* styles-variants.css — brutalist style overrides on the .root.
+   Sharp, monochrome, oversized condensed type (Anton), no rounding.
+*/
+.style-brutalist {
+  --bg: #000000;
+  --bg-2: #0a0a0a;
+  --bg-3: #141414;
+  --fg: #f5f5f5;
+  --dim: #9a9a9a;
+  --dimmer: #5a5a5a;
+  --border: rgba(255,255,255,0.22);
+  --border-2: rgba(255,255,255,0.42);
+}
+.style-brutalist.theme-light {
+  --bg: #f3f1ed;
+  --bg-2: #e9e6df;
+  --bg-3: #dcd8d0;
+  --fg: #0a0a0a;
+  --dim: #4a4a4a;
+  --dimmer: #888;
+  --border: rgba(0,0,0,0.28);
+  --border-2: rgba(0,0,0,0.55);
+}
+
+/* sticky scrolling top stripe */
+.style-brutalist .nav-wrap {
+  border-bottom: 2px solid var(--fg);
+  background: var(--bg);
+}
+.style-brutalist .nav { padding-top: 14px; padding-bottom: 14px; }
+.style-brutalist .nav-brand {
+  font-family: "Anton", "Bahnschrift Condensed", "Bahnschrift", sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+}
+.style-brutalist .nav-link {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+}
+.style-brutalist .nav-link.is-active::after {
+  height: 3px;
+  border-radius: 0;
+  bottom: -16px;
+  left: -4px; right: -4px;
+}
+.style-brutalist .nav-lang {
+  border-radius: 0;
+  border-width: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 11px;
+}
+.style-brutalist .nav-burger { border-radius: 0; border-width: 2px; }
+
+/* sections */
+.style-brutalist .sec { padding-top: 96px; }
+.style-brutalist .sec-title {
+  font-family: "Anton", "Bahnschrift Condensed", "Bahnschrift", sans-serif;
+  font-size: clamp(36px, 5vw, 56px);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+  line-height: 0.95;
+}
+.style-brutalist .sec-rule {
+  height: 3px;
+  background: var(--fg);
+}
+.style-brutalist .sec-link {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  border: 2px solid var(--fg);
+  padding: 6px 12px;
+}
+.style-brutalist .sec-link:hover {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+/* hero */
+.style-brutalist .kicker {
+  font-size: 13px;
+  letter-spacing: 0.32em;
+  color: var(--fg);
+  background: var(--accent);
+  display: inline-block;
+  padding: 4px 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.style-brutalist.theme-light .kicker { color: var(--bg); }
+.style-brutalist .name {
+  font-family: "Anton", "Bahnschrift Condensed", "Bahnschrift", sans-serif;
+  font-size: clamp(64px, 13vw, 160px);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 0.9;
+  font-weight: 400;
+  margin: 8px 0 22px;
+  /* a hint of asymmetry */
+  margin-left: -2px;
+}
+.style-brutalist .meta-row { font-size: 14px; }
+.style-brutalist .meta-item.dot {
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  padding: 2px 10px;
+}
+.style-brutalist .meta-item.dot::before { display: none; }
+.style-brutalist .bio { font-size: 17px; max-width: 64ch; }
+.style-brutalist .tool-tag {
+  border-radius: 0;
+  border: 2px solid var(--border-2);
+  font-weight: 600;
+  background: transparent;
+}
+.style-brutalist .tools-label { letter-spacing: 0.22em; }
+
+/* games */
+.style-brutalist .game-card {
+  border-radius: 0;
+  border: 2px solid var(--fg);
+  background: var(--bg);
+  padding: 0;
+  gap: 0;
+}
+.style-brutalist .game-card.is-active { border-color: var(--accent); }
+.style-brutalist .game-head {
+  padding: 18px;
+  border-bottom: 2px solid var(--border-2);
+  grid-template-columns: 96px 1fr;
+}
+.style-brutalist .game-thumb {
+  border-radius: 0;
+  width: 96px;
+  height: 96px;
+  border: 2px solid var(--fg);
+}
+.style-brutalist .game-title {
+  font-family: "Anton", "Bahnschrift Condensed", "Bahnschrift", sans-serif;
+  text-transform: uppercase;
+  font-size: 24px;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+}
+.style-brutalist .game-sub {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+.style-brutalist .game-actions {
+  padding: 14px 18px;
+  background: var(--bg-2);
+}
+.style-brutalist .btn-line {
+  border-radius: 0;
+  border-width: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 16px;
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+.style-brutalist .btn-line:hover {
+  background: var(--fg);
+  border-color: var(--fg);
+  color: var(--bg);
+}
+.style-brutalist .btn-line.ghost {
+  background: transparent;
+  color: var(--fg);
+  border-color: var(--fg);
+}
+.style-brutalist .btn-line.ghost:hover { background: var(--fg); color: var(--bg); }
+.style-brutalist .game-embed { border-radius: 0; border: 0; border-top: 2px solid var(--border); }
+
+/* certs — table rows */
+.style-brutalist .cert-row {
+  border-bottom: 2px solid var(--border);
+  padding: 18px 0;
+  font-size: 16px;
+}
+.style-brutalist .cert-year {
+  font-family: "Anton", "Bahnschrift Condensed", sans-serif;
+  font-size: 22px;
+  color: var(--accent);
+}
+.style-brutalist .cert-title { font-weight: 600; }
+.style-brutalist .cert-issuer {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* jams */
+.style-brutalist .jam-col-title {
+  font-family: "Anton", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  color: var(--fg);
+  font-weight: 400;
+}
+.style-brutalist .jam-row {
+  border-radius: 0;
+  border: 2px solid var(--border-2);
+  background: var(--bg);
+  padding: 16px 18px;
+}
+.style-brutalist .jam-row:hover {
+  border-color: var(--accent);
+  background: var(--bg-2);
+}
+.style-brutalist .jam-name {
+  font-family: "Anton", sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+}
+.style-brutalist .jam-year {
+  font-family: "Anton", sans-serif;
+  font-size: 22px;
+  color: var(--accent);
+  font-weight: 400;
+}
+
+/* blog */
+.style-brutalist .timeline {
+  border-left: 2px solid var(--border-2);
+  padding-left: 22px;
+}
+.style-brutalist .tl-dot {
+  border-radius: 0;
+  width: 12px; height: 12px;
+  left: -29px;
+  border: 0;
+  background: var(--accent);
+  transform: rotate(45deg);
+}
+.style-brutalist .tl-date {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+.style-brutalist .tl-title {
+  font-family: "Anton", sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+  line-height: 1.05;
+}
+.style-brutalist .tl-body {
+  border-radius: 0;
+  border: 2px solid var(--border-2);
+}
+.style-brutalist .tag {
+  border-radius: 0;
+  border: 2px solid var(--border);
+  text-transform: uppercase;
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+}
+
+/* contact */
+.style-brutalist .contact-row {
+  border-bottom: 2px solid var(--border);
+  padding: 20px 0;
+  font-size: 17px;
+}
+.style-brutalist .contact-label {
+  font-family: "Anton", sans-serif;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.style-brutalist .footer {
+  border-top: 2px solid var(--border-2);
+}
