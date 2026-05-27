@@ -116,7 +116,7 @@ window.PORTFOLIO_CONTENT = {
 
   ui: {
     close:  { tr: "kapat",       en: "close" },
-    footer: { tr: "el yapımı · tek sayfa · 2026", en: "handmade · single page · 2026" },
+    footer: { tr: "2026", en: "2026" },
     comingSoon:     { tr: "Yakında", en: "Coming soon" },
     comingSoonDesc: { tr: "Yakında ilk devblog yazıları burada olacak.",
                       en: "First devblog entries will land here soon." },
