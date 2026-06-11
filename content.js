@@ -21,12 +21,12 @@ window.PORTFOLIO_CONTENT = {
     body: {
       tr: [
         "Merhaba — ben Arda. Game Developer'ım. Genel olarak Unity 3D ortamlarda çalışıyorum.",
-        "İlgi alanlarım: oyun mekaniği tasarımı, prosedürel sistemler. Ara sıra Unreal da kullanıyorum ancak pek yetkin olduğumu söyleyemem. Aynı zamanda jam organizasyonu ve topluluk işleri ile de ilgileniyorum.",
+        "İlgi alanlarım: oyun mekaniği tasarımı, prosedürel sistemler. Aynı zamanda jam organizasyonu ve topluluk işleri ile de ilgileniyorum.",
         "Bu sitede bitirdiğim oyunları, devam eden geliştirme blog'larımı, sertifikalarımı ve yer aldığım jam'leri topluyorum."
       ],
       en: [
         "Hi — I'm Arda. I'm a Game Developer. I usually work in Unity 3D environments.",
-        "My interests include game mechanic design and procedural systems. I occasionally use Unreal as well, though I wouldn't call myself proficient in it. I'm also involved in jam organization and community work.",
+        "My interests include game mechanic design and procedural systems. I'm also involved in jam organization and community work.",
         "On this site, I'm collecting the games I've finished, my ongoing development blogs, my certificates, and the jams I've participated in."
       ],
     },
