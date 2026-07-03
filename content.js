@@ -34,7 +34,6 @@ window.PORTFOLIO_CONTENT = {
   },
   
   games: [
-
     {
       slug: "vr-exhibition",
       title: "Ali İhtiyar's VR Exhibition",
