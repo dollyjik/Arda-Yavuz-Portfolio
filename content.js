@@ -30,7 +30,7 @@ window.PORTFOLIO_CONTENT = {
         "On this site, I'm collecting the games I've finished, my ongoing development blogs, my certificates, and the jams I've participated in."
       ],
     },
-    tools: ["Unity", "C#", "Aseprite"],
+    tools: ["Unity", "C#", "Aseprite", "VR"],
   },
   
   games: [
