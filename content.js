@@ -53,7 +53,7 @@ window.PORTFOLIO_CONTENT = {
       desc:  { tr: "Oyuncuların kendi kart destelerini kurup taktiksel tahta savaşlarında rakiplerine karşı yarıştığı bir deck builder kart oyunu.",
         en: "A deck-building card game where players craft their own decks and face off against opponents in tactical board combat." },
       year: 2026, engine: "Unity", embedId: null,
-      cover: "https://pub-faedaa1ed23048f9a9aac33bd90b8328.r2.dev/game_icon.png",
+      cover: "https://img.itch.zone/aW1hZ2UvNDY5NzAyMi8yODI3MTY3MS5wbmc=/347x500/7SI2UQ.png",
       url: "https://dollyjik.itch.io/mind-visitors",
     },
       
@@ -74,7 +74,7 @@ window.PORTFOLIO_CONTENT = {
       desc:  { tr: "Potion Merchant, fantastik bir orta çağ kasabasında geçen bir FPS Store Management oyunudur.",
                en: "Potion Merchant is an FPS Store Management game set in a fantasy medieval town." },
       year: 2024, engine: "Unity", embedId: null,
-      cover: "https://pub-faedaa1ed23048f9a9aac33bd90b8328.r2.dev/sikke_icon.png",
+      cover: "https://img.itch.zone/aW1hZ2UvMzg1MjQyMi8yODI3MTY1OS5wbmc=/original/jKPg55.png",
       url: "https://dollyjik.itch.io/potion-merchant",
     },
 
