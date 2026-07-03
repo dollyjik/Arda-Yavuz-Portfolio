@@ -96,9 +96,12 @@ function GameCard({ game, lang, active, onToggle }) {
           </button>
         )}
         <a className="btn-line ghost" href={game.url} target="_blank" rel="noreferrer">
-          {lang === "tr"
-            ? (<><span lang="en">itch.io</span>'da incele</>)
-            : (<>view on <span lang="en">itch.io</span></>)
+          {game.linkLabel
+            ? L(game.linkLabel, lang)
+            : (lang === "tr"
+                ? (<><span lang="en">itch.io</span>'da incele</>)
+                : (<>view on <span lang="en">itch.io</span></>)
+              )
           } ↗
         </a>
       </div>

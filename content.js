@@ -43,6 +43,18 @@ window.PORTFOLIO_CONTENT = {
       year: 2026, engine: "Unity", embedId: null,
       cover: "https://pub-faedaa1ed23048f9a9aac33bd90b8328.r2.dev/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202026-07-03%20162257.png",
       url: "https://ifsanalsergi.arel.edu.tr/sergi/",
+      linkLabel: { tr: "web sitesini ziyaret et", en: "visit website" },
+    },
+      
+    {
+      slug: "mind-visitor",
+      title: "Mind Visitor",
+      tag:   { tr: "Deck Builder",  en: "Deck Builder" },
+      desc:  { tr: "Oyuncuların kendi kart destelerini kurup taktiksel tahta savaşlarında rakiplerine karşı yarıştığı bir deck builder kart oyunu.",
+        en: "A deck-building card game where players craft their own decks and face off against opponents in tactical board combat." },
+      year: 2026, engine: "Unity", embedId: null,
+      cover: "https://pub-faedaa1ed23048f9a9aac33bd90b8328.r2.dev/game_icon.png",
+      url: "https://dollyjik.itch.io/mind-visitors",
     },
       
     {
