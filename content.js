@@ -34,6 +34,18 @@ window.PORTFOLIO_CONTENT = {
   },
   
   games: [
+
+    {
+      slug: "vr-exhibition",
+      title: "Ali İhtiyar's VR Exhibition",
+      tag:   { tr: "VR Sanat Sergisi", en: "VR Art Exhibition" },
+      desc:  { tr: "Ali İhtiyar'ın fotoğraflarının ve kısa filmlerinin sergilendiği bir VR Sanat Sergisi.",
+        en: "A VR Art Exhibition that exhibit Turkish Photographer Ali Ihtiyar's photographs and short films." },
+      year: 2026, engine: "Unity", embedId: null,
+      cover: "https://pub-faedaa1ed23048f9a9aac33bd90b8328.r2.dev/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202026-07-03%20162257.png",
+      url: "https://ifsanalsergi.arel.edu.tr/sergi/",
+    },
+      
     {
       slug: "fishwash",
       title: "FishWash",
@@ -54,6 +66,7 @@ window.PORTFOLIO_CONTENT = {
       cover: "https://pub-faedaa1ed23048f9a9aac33bd90b8328.r2.dev/sikke_icon.png",
       url: "https://dollyjik.itch.io/potion-merchant",
     },
+
   ],
   
   certs: [
@@ -78,6 +91,7 @@ window.PORTFOLIO_CONTENT = {
   ],
 
   jamsOrganized: [
+      { name: "GOAT Jam III",    year: 2026, theme: null,           participants: null , url: null },
     { name: "Liseler Arası Game Jam II",    year: 2026, theme: null,           participants: 29, url: "https://itch.io/jam/liseler-arasi-game-jam-ii" },
     { name: "Staff Jam",     year: 2025, theme: null,              participants: null  , url: null },    
     { name: "Sandwich Jam 2",     year: 2025, theme: null,              participants: 11, url: "https://itch.io/jam/sandvich-jam-2" },
