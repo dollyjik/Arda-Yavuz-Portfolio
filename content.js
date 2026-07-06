@@ -9,7 +9,7 @@ window.PORTFOLIO_CONTENT = {
 
   nav: {
     about:   { tr: "hakkında",     en: "about" },
-    games:   { tr: "oyunlar",      en: "games" },
+    games:   { tr: "projeler",     en: "games" },
     certs:   { tr: "sertifikalar", en: "certs" },
     jams:    { tr: "jam'ler",      en: "jams" },
     blog:    { tr: "devblog",      en: "devblog" },

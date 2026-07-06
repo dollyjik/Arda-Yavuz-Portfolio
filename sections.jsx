@@ -46,7 +46,7 @@ function Games({ lang }) {
   const [active, setActive] = useState(null);
   return (
     <section id="games" className="sec" data-screen-label="02 games">
-      <SectionHeader title={lang === "tr" ? "Oyunlar" : "Games"}>
+      <SectionHeader title={lang === "tr" ? "Projeler" : "Games"}>
         <a className="sec-link" href={`https://${PC.meta.itchUser}.itch.io`} target="_blank" rel="noreferrer" lang="en">
           {PC.meta.itchUser}.itch.io ↗
         </a>
@@ -171,186 +171,6 @@ function ThumbArt({ slug, big = false }) {
 }
 
 // ────────────────────────────────────────────────────────────────
-// Certificates
-// ────────────────────────────────────────────────────────────────
-function Certs({ lang }) {
-  return (
-    <section id="certs" className="sec" data-screen-label="03 certs">
-      <SectionHeader title={lang === "tr" ? "Sertifikalar" : "Certificates"} />
-      <ul className="cert-list">
-        {PC.certs.map((c, i) => {
-          const Tag = c.url ? "a" : "div";
-          const linkProps = c.url ? { href: c.url, target: "_blank", rel: "noreferrer" } : {};
-          return (
-            <li key={i}>
-              <Tag className={"cert-row" + (c.url ? " is-link" : "")} {...linkProps}>
-                <span className="cert-year">{c.year}</span>
-                <span className="cert-title">
-                  {L(c.title, lang)}
-                  {c.url && <span className="row-arrow" aria-hidden="true"> ↗</span>}
-                </span>
-                <span className="cert-issuer" lang="en">{L(c.issuer, lang)}</span>
-              </Tag>
-            </li>
-          );
-        })}
-      </ul>
-    </section>
-  );
-}
-
-// ────────────────────────────────────────────────────────────────
-// Jams (attended + organized)
-// ────────────────────────────────────────────────────────────────
-function Jams({ lang }) {
-  return (
-    <section id="jams" className="sec" data-screen-label="04 jams">
-      <SectionHeader title={lang === "tr" ? "Jam'ler" : "Jams"} />
-
-      <div className="jam-cols">
-        <div className="jam-col">
-          <h3 className="jam-col-title">
-            {lang === "tr" ? "Katıldıklarım" : "Attended"}
-          </h3>
-          <ul className="jam-list">
-            {PC.jamsAttended.map((j, i) => (
-              <JamRow
-                key={i}
-                jam={j}
-                bottom={
-                  <>
-                    <span className="jam-role">{L(j.role, lang)}</span>
-                    {j.place && <span className="jam-place"> · {L(j.place, lang)}</span>}
-                  </>
-                }
-              />
-            ))}
-          </ul>
-        </div>
-
-        <div className="jam-col">
-          <h3 className="jam-col-title">
-            {lang === "tr" ? "Düzenlediklerim" : "Organized"}
-          </h3>
-          <ul className="jam-list">
-            {PC.jamsOrganized.map((j, i) => (
-              <JamRow
-                key={i}
-                jam={j}
-                bottom={
-                  <>
-                    <span className="jam-role">{L(j.theme, lang)}</span>
-                    {j.participants ? (
-                      <span className="jam-place">  {j.participants} {lang === "tr" ? "yüklenen oyun" : "uploaded game"}</span>
-                    ) : null}
-                  </>
-                }
-              />
-            ))}
-          </ul>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function JamRow({ jam, bottom }) {
-  const Tag = jam.url ? "a" : "div";
-  const linkProps = jam.url ? { href: jam.url, target: "_blank", rel: "noreferrer" } : {};
-  return (
-    <li>
-      <Tag className={"jam-row" + (jam.url ? " is-link" : "")} {...linkProps}>
-        <div className="jam-row-top">
-          <span className="jam-name" lang="en">
-            {jam.name}
-            {jam.url && <span className="row-arrow" aria-hidden="true"> ↗</span>}
-          </span>
-          <span className="jam-year">{jam.year}</span>
-        </div>
-        <div className="jam-row-bot">{bottom}</div>
-      </Tag>
-    </li>
-  );
-}
-
-// ────────────────────────────────────────────────────────────────
-// Blog / Devblog — timeline
-// ────────────────────────────────────────────────────────────────
-function Blog({ lang }) {
-  const [open, setOpen] = useState(0);
-  // İçi boşaltılmış (örn. tüm alanlar yorum satırına alınmış {}) girdileri ele.
-  const posts = (PC.blog || []).filter((p) => p && (p.title || p.date || p.body));
-  if (posts.length === 0) {
-    return (
-      <section id="blog" className="sec" data-screen-label="05 blog">
-        <SectionHeader title="Devblog" />
-        <div className="empty-state">
-          <div className="empty-title">{L(PC.ui.comingSoon, lang)}</div>
-          <p className="empty-desc">{L(PC.ui.comingSoonDesc, lang)}</p>
-        </div>
-      </section>
-    );
-  }
-  return (
-    <section id="blog" className="sec" data-screen-label="05 blog">
-      <SectionHeader title="Devblog" />
-      <ol className="timeline">
-        {posts.map((post, i) => {
-          const isOpen = open === i;
-          const d = new Date(post.date);
-          return (
-            <li key={i} className={"tl-item" + (isOpen ? " open" : "")}>
-              <button className="tl-head" onClick={() => setOpen(isOpen ? -1 : i)}>
-                <span className="tl-dot" />
-                <span className="tl-date">{formatDate(d, lang)}</span>
-                <span className="tl-title" lang="en">{L(post.title, lang)}</span>
-                <span className="tl-chev">{isOpen ? "−" : "+"}</span>
-              </button>
-              <div className="tl-tags">
-                {post.tags.map((tag) => <span key={tag} className="tag" lang="en">{tag}</span>)}
-              </div>
-              {isOpen && (
-                <div className="tl-body">
-                  <p>{L(post.body, lang)}</p>
-                </div>
-              )}
-            </li>
-          );
-        })}
-      </ol>
-    </section>
-  );
-}
-
-function formatDate(d, lang) {
-  const m = d.toLocaleString(lang === "tr" ? "tr-TR" : "en-US", { month: "short" });
-  return `${String(d.getDate()).padStart(2, "0")} ${m} ${d.getFullYear()}`;
-}
-
-// ────────────────────────────────────────────────────────────────
-// Contact
-// ────────────────────────────────────────────────────────────────
-function Contact({ lang }) {
-  return (
-    <section id="contact" className="sec" data-screen-label="06 contact">
-      <SectionHeader title={lang === "tr" ? "İletişim" : "Contact"} />
-      <p className="contact-body">{L(PC.contact.body, lang)}</p>
-      <ul className="contact-list">
-        {PC.contact.links.map((c, i) => (
-          <li key={i}>
-            <a className="contact-row" href={c.href} target="_blank" rel="noreferrer">
-              <span className="contact-label" lang="en">{c.label}</span>
-              <span className="contact-line" aria-hidden="true" />
-              <span className="contact-handle" lang="en">{c.handle} ↗</span>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </section>
-  );
-}
-
-// ────────────────────────────────────────────────────────────────
 // Shared bits
 // ────────────────────────────────────────────────────────────────
 function SectionHeader({ title, children }) {
@@ -367,5 +187,5 @@ function SectionHeader({ title, children }) {
 
 // expose to window so app.jsx can use them
 Object.assign(window, {
-  Hero, Games, Certs, Jams, Blog, Contact, SectionHeader, L,
+  Hero, Games, SectionHeader, L,
 });

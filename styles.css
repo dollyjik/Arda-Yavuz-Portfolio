@@ -739,6 +739,23 @@ a.jam-row.is-link:hover .jam-name { color: var(--accent); }
   .contact-row { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; }
 }
 
+/* print — fit whole portfolio onto a single continuous PDF page.
+   Page size is set programmatically to match content height at build time;
+   see package/print scripts for the actual export step. */
+@media print {
+  @page { size: 900px 1200px; margin: 0; }
+  html, body, .root { height: auto; }
+  /* Chrome lays print content out at its default paper width regardless of
+     the custom @page size above, so the games-grid mobile breakpoint would
+     otherwise wrongly kick in — force the 2-column layout explicitly. */
+  .games-grid { grid-template-columns: 1fr 1fr !important; }
+  /* Trim the large top/bottom section padding designed for a scrolling page. */
+  .sec, .sec.hero, .style-brutalist .sec, .style-brutalist .sec.hero {
+    padding-top: 24px !important;
+    padding-bottom: 8px !important;
+  }
+}
+
 /* reduce-motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
